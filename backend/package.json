@@ -5,13 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
-    "start:frontend": "npm --prefix frontend start",
-    "start:backend": "npm --prefix backend run dev",
-    "dev": "nodemon src/app.ts"
+    "start:frontend": "npm --prefix ../frontend start",
+    "start:backend": "npm run dev",
+    "dev": "nodemon --exec ts-node --loader ts-node/esm src/app.ts"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "express": "^4.21.2",
     "rcon-client": "^4.2.5",
@@ -22,7 +19,9 @@
     "@types/node": "^22.10.5",
     "concurrently": "^9.1.2",
     "nodemon": "^3.1.9",
-    "typescript": "^5.7.3"
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3",
+    "web-vitals": "^4.2.4"
   },
   "description": ""
 }

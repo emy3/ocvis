@@ -1,4 +1,5 @@
 import { ReportHandler } from 'web-vitals';
+import {onCLS} from 'web-vitals';
 
 const reportWebVitals = (onPerfEntry?: ReportHandler) => {
   if (onPerfEntry && onPerfEntry instanceof Function) {
@@ -11,5 +12,9 @@ const reportWebVitals = (onPerfEntry?: ReportHandler) => {
     });
   }
 };
+
+const reportWebVitalsDebug: ReportHandler = (metric: any) => {
+  console.log(metric);
+}
 
 export default reportWebVitals;

@@ -7,7 +7,7 @@
     "start": "concurrently \"npm run start:frontend\" \"npm run start:backend\"",
     "start:frontend": "npm --prefix ../frontend start",
     "start:backend": "npm run dev",
-    "dev": "nodemon --exec ts-node --loader ts-node/esm src/app.ts"
+    "dev": "nodemon --exec ts-node ts-node src/app.ts"
   },
   "dependencies": {
     "express": "^4.21.2",

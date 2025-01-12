@@ -8,7 +8,7 @@ const port = 3001;
 // mount the routes on the /api patch
 app.use('/api', routes);
 
-app.get('/', (req, res) => {
+app.get('/', (req: Request, res: Response) => {
     res.send('OceonView Miencraft Server Dash API')
 });
 
